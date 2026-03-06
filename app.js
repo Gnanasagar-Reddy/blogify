@@ -30,6 +30,6 @@ res.render("home",{
 
 app.use("/user",userRoute);
 app.use("/blog",blogRoute);
-app.listen(3000, "0.0.0.0",()=>{
+app.listen(port, "0.0.0.0",()=>{
    console.log(`server is connected at port ${port}`);
 })
