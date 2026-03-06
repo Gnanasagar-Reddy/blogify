@@ -6,7 +6,7 @@ const userRoute=require("./routes/user.js")
 const blogRoute=require("./routes/blog.js")
 const cookieParser=require("cookie-parser");
 const app=express();
-const port=process.env.PORT || 3000;
+const PORT=process.env.PORT || 3000;
 const mongoose=require("mongoose");
 const { checkForAuthenticationCookie } = require("./middleware/authentication.js");
 const Blog=require("./models/blog.js")
@@ -30,6 +30,6 @@ res.render("home",{
 
 app.use("/user",userRoute);
 app.use("/blog",blogRoute);
-app.listen(port, "0.0.0.0",()=>{
+app.listen(PORT, "0.0.0.0",()=>{
    console.log(`server is connected at port ${port}`);
 })
